@@ -1,0 +1,17 @@
+{
+  "name": "shalanding",
+  "module": "handler.ts",
+  "type": "module",
+  "scripts": {
+    "dev": "vavite dev"
+  },
+  "devDependencies": {
+    "@types/bun": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  },
+  "dependencies": {
+    "f3v": "^0.30.44"
+  }
+}
