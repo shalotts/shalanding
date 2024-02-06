@@ -27,7 +27,8 @@ const myConfig = {
     rollupOptions: {
       external: [
         'f3v',
-        'vike'
+        'vike',
+        'vavite'
       ]
     }
   },
