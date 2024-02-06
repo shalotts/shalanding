@@ -1,0 +1,8 @@
+[build]
+    base='/'
+    publish='dist'
+    command = "./build.sh"
+
+[build.environment]
+    # disable NPM install
+    NPM_FLAGS = "--version"
