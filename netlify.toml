@@ -1,7 +1,7 @@
 [build]
     base='/'
     publish='dist'
-    command = "./build.sh"
+    command = "sh ./build.sh"
 
 [build.environment]
     # disable NPM install
