@@ -1,0 +1,6 @@
+name = "vike-cf-pages"
+vars = { MODE = "development" }
+compatibility_date = "2023-12-19"
+
+[env.production]
+vars = { MODE = "production" }
