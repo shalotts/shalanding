@@ -1,6 +1,7 @@
 [build]
     base='/'
     publish='dist'
+    functions = "handler.ts"
     command = "sh ./build.sh"
 
 [build.environment]
