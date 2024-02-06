@@ -1,6 +1,6 @@
 import { IncomingMessage, ServerResponse } from 'node:http';
 import { AppModule, HttpModule } from 'f3v';
-import config from './sha.config.ts';
+import config from '../../sha.config.ts';
 
 const http = new HttpModule(config.fastifyInstanceOptions);
 const FastifyInstance = await http.createServer();

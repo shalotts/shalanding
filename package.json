@@ -1,6 +1,6 @@
 {
   "name": "shalanding",
-  "module": "handler.ts",
+  "module": "functions/netlify/handler.ts",
   "type": "module",
   "scripts": {
     "dev": "vavite dev",

@@ -1,7 +1,7 @@
 [build]
     base='/'
     publish='dist'
-    functions = "handler.ts"
+    functions = "/functions/netlify"
     command = "sh ./build.sh"
 
 [build.environment]
