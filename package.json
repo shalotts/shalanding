@@ -6,12 +6,15 @@
     "dev": "vavite dev"
   },
   "devDependencies": {
-    "@types/bun": "latest"
+    "@types/bun": "latest",
+    "@vicons/utils": "^0.1.4",
+    "naive-ui": "^2.37.3",
+    "vfonts": "^0.0.3"
   },
   "peerDependencies": {
     "typescript": "^5.0.0"
   },
   "dependencies": {
-    "f3v": "^0.30.44"
+    "f3v": "latest"
   }
 }
