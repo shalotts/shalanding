@@ -1,6 +1,6 @@
 [build]
     base="/"
-    publish="dist"
+    publish="dist/client"
     command = "sh ./build.sh"
 #    targetPort = "3000"
 #    functions = "functions"
