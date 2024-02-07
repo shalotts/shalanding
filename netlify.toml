@@ -2,14 +2,14 @@
     base="/"
     publish="dist"
     command = "sh ./build.sh"
-    targetPort = "3000"
+#    targetPort = "3000"
 #    functions = "functions"
 
 [build.environment]
     # disable NPM install
+    NPM_FLAGS = "--version"
     NODE_VERSION = "20"
     NODE_ENV = "production"
-    NPM_FLAGS = "--version"
 
 #[[redirects]]
 #    from = "/*"
