@@ -1,5 +1,4 @@
-import { defineConfig, defaultConfig, listen } from 'f3v'
-import { join } from 'node:path'
+import { defineConfig, defaultConfig } from 'f3v'
 import { defu } from 'defu'
 import type { IAppConfig } from 'f3v';
 

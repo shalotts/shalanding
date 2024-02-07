@@ -6,40 +6,42 @@ import UnoCSS from 'unocss/vite';
 import vue from '@vitejs/plugin-vue';
 import ssr from 'vike/plugin';
 import path from 'node:path';
+import { vavite } from 'vavite';
 
-const { buildSteps, ...config } = defaultViteF3vConfig;
+// const { buildSteps, ...config } = defaultViteF3vConfig;
 
 
 const myConfig = {
   server: {
     port: 3000,
   },
+  optimizeDeps: {
+    exclude: ['functions/*']
+  },
   plugins: [
-    // vavite({
-    //   handlerEntry: '/handler.ts',
-    //   serveClientAssetsInDev: true,
-    // }),
+    vavite({
+      handlerEntry: '/handler.ts',
+      serveClientAssetsInDev: true,
+    }),
     ssr(),
     vue({
       include: [/\.vue$/, /\.md$/],
     }),
-    UnoCSS(),
+    UnoCSS()
   ],
   build: {
     rollupOptions: {
-      external: [
-        'f3v',
-        'vike',
-        'vavite'
-      ]
+      external: ['f3v']
     }
   },
   resolve: {
     dedupe: ['vue'],
     alias: {
       '#': path.resolve('.'),
+      '~/': path.resolve('./'),
+      '~/app/': path.resolve('./app/')
     },
   },
 } satisfies UserConfig
 
-export default defineConfig(defu(config, myConfig));
+export default defineConfig(defu(defaultViteF3vConfig, myConfig));

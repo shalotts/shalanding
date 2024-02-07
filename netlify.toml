@@ -1,9 +1,16 @@
 [build]
-    base='/'
-    publish='dist'
-    functions = "/functions/netlify"
+    publish="dist"
     command = "sh ./build.sh"
+    targetPort = "3000"
+    functions = "functions"
 
 [build.environment]
     # disable NPM install
+    NODE_VERSION = "20"
+    NODE_ENV = "production"
     NPM_FLAGS = "--version"
+
+[[redirects]]
+    from = "/*"
+    to = "/"
+    status = 200

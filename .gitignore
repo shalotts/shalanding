@@ -176,3 +176,5 @@ dist
 
 app/cache
 app/log
+# Local Netlify folder
+.netlify

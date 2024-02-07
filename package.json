@@ -1,12 +1,16 @@
 {
   "name": "shalanding",
-  "module": "functions/netlify/handler.ts",
+  "module": "handler.ts",
   "type": "module",
   "scripts": {
     "dev": "vavite dev",
-    "build": "vite build"
+    "build": "vavite-multibuild",
+    "build:netlify": "vavite-multibuild --ssr handler.ts"
   },
   "devDependencies": {
+    "@fastify/aws-lambda": "^4.0.0",
+    "@netlify/functions": "^2.5.1",
+    "@netlify/vite-plugin-netlify-edge": "^1.1.3",
     "@types/bun": "latest",
     "@vicons/utils": "^0.1.4",
     "naive-ui": "^2.37.3",
