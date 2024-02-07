@@ -7,6 +7,7 @@ import vue from '@vitejs/plugin-vue';
 import ssr from 'vike/plugin';
 import path from 'node:path';
 import { vavite } from 'vavite';
+import topLevelAwait from 'vite-plugin-top-level-await';
 
 // const { buildSteps, ...config } = defaultViteF3vConfig;
 
@@ -23,11 +24,12 @@ const myConfig = {
       handlerEntry: '/handler.ts',
       serveClientAssetsInDev: true,
     }),
-    ssr(),
+    ssr({ prerender: true }),
     vue({
       include: [/\.vue$/, /\.md$/],
     }),
-    UnoCSS()
+    UnoCSS(),
+    topLevelAwait()
   ],
   build: {
     rollupOptions: {

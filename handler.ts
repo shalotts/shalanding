@@ -8,6 +8,8 @@ export const proxy = async () => {
   const $sha = new AppModule(FastifyInstance, config);
   await $sha.create();
 
+  console.log('CREATED');
+
   return awsLambdaFastify($sha.app)
 };
 
