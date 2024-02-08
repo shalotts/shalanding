@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "vavite dev",
     "build": "vavite-multibuild",
-    "build:netlify": "vavite-multibuild --ssr handler.ts"
+    "build:default": "vite build"
   },
   "devDependencies": {
     "@fastify/aws-lambda": "^4.0.0",

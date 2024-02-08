@@ -4,4 +4,4 @@ curl -fsSL https://bun.sh/install | bash
 export PATH="/opt/buildhome/.bun/bin:$PATH"
 bun --version
 bun install
-vite build
+bun run build
