@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "lib": ["ESNext"],
+    "lib": ["ESNext", "WebWorker"],
     "target": "ESNext",
     "module": "ESNext",
     "moduleDetection": "force",
@@ -17,6 +17,17 @@
     "skipLibCheck": true,
     "strict": true,
     "noFallthroughCasesInSwitch": true,
-    "forceConsistentCasingInFileNames": true
+    "forceConsistentCasingInFileNames": true,
+    "types": [
+      "node"
+    ],
+    "paths": {
+      "#root/*": [
+        "./src/*"
+      ],
+      "#pages/*": [
+        "./src/pages/*"
+      ]
+    }
   }
 }

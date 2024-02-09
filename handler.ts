@@ -1,7 +1,6 @@
 import awsLambdaFastify from '@fastify/aws-lambda'
 import { AppModule, HttpModule } from 'f3v';
 import config from './sha.config.ts';
-
 export const proxy = async () => {
   const http = new HttpModule(config.fastifyInstanceOptions);
   const FastifyInstance = await http.createServer();

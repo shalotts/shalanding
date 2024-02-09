@@ -3,19 +3,24 @@
   "module": "handler.ts",
   "type": "module",
   "scripts": {
-    "dev": "vavite dev",
+    "dev": "vite dev",
     "build": "vavite-multibuild",
     "build:default": "vite build"
   },
   "devDependencies": {
+    "@browsery/util": "^0.4.0",
+    "@cloudinary/url-gen": "^1.16.1",
+    "@cloudinary/vue": "^1.12.0",
     "@fastify/aws-lambda": "^4.0.0",
+    "@fontsource-variable/jetbrains-mono": "^5.0.19",
     "@netlify/functions": "^2.5.1",
     "@netlify/vite-plugin-netlify-edge": "^1.1.3",
     "@types/bun": "latest",
+    "@types/node": "^20.11.17",
+    "@unocss/reset": "^0.58.5",
+    "@vicons/carbon": "^0.12.0",
     "@vicons/utils": "^0.1.4",
-    "naive-ui": "^2.37.3",
-    "vfonts": "^0.0.3",
-    "vite-plugin-top-level-await": "^1.4.1"
+    "naive-ui": "^2.37.3"
   },
   "peerDependencies": {
     "typescript": "^5.0.0"

@@ -7,12 +7,14 @@ import vue from '@vitejs/plugin-vue';
 import ssr from 'vike/plugin';
 import path from 'node:path';
 // import { vavite } from 'vavite';
-// import topLevelAwait from 'vite-plugin-top-level-await';
 
 const { buildSteps, ...config } = defaultViteF3vConfig;
 
 
 const myConfig = {
+  ssr: {
+    noExternal: ['@cloudinary/html']
+  },
   server: {
     port: 3000,
   },
@@ -29,7 +31,6 @@ const myConfig = {
       include: [/\.vue$/, /\.md$/],
     }),
     UnoCSS(),
-    // topLevelAwait()
   ],
   build: {
     rollupOptions: {
@@ -41,7 +42,9 @@ const myConfig = {
     alias: {
       '#': path.resolve('.'),
       '~/': path.resolve('./'),
-      '~/app/': path.resolve('./app/')
+      '~/app/': path.resolve('./app/'),
+      '#root': path.resolve('./src/'),
+      '#pages': path.resolve('./src/pages/')
     },
   },
 } satisfies UserConfig
