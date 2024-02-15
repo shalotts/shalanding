@@ -1,14 +1,14 @@
-name = 'shaland'
-
-[build]
-cwd = "."
-command="bun run build"
-
-[build.upload]
-dir="/dist/server"
-main="/dist/server/index.mjs"
-
-[vars]
-VITE_CLOUDINARY_NAME="dr5gcup5n"
-VITE_CLOUDINARY_KEY="492969616715197"
-VITE_CLOUDINARY_SECRET="kMyCYOi4FJWKTJADQi_kofl8baM"
+#name = 'shaland'
+#
+#[build]
+#cwd = "."
+#command="bun run build"
+#
+#[build.upload]
+#dir="/dist/server"
+#main="/dist/server/index.mjs"
+#
+#[vars]
+#VITE_CLOUDINARY_NAME="dr5gcup5n"
+#VITE_CLOUDINARY_KEY="492969616715197"
+#VITE_CLOUDINARY_SECRET="kMyCYOi4FJWKTJADQi_kofl8baM"
