@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { useCloudinary } from '#root/util.ts';
+import { useCloudinary } from '#pages/util.ts';
 
 const cld = useCloudinary();
 const logo = cld.image('shalotts-landing/p3kgjrpnqkhfzfgybtg6').toURL()

@@ -1,17 +1,17 @@
 name = 'shaland'
 main="./functions/wrangler/index.ts"
 compatibility_date = "2024-01-29"
-node_compat = true
+#node_compat = true
 workers_dev = true
 
-[build]
-cwd = "."
-command="bun run build"
+#[build.upload]
+#dir="./dist/client"
+#command="bun run build"
+
+#[site]
+#bucket = "./dist/client"
 
 [vars]
 VITE_CLOUDINARY_NAME="dr5gcup5n"
 VITE_CLOUDINARY_KEY="492969616715197"
 VITE_CLOUDINARY_SECRET="kMyCYOi4FJWKTJADQi_kofl8baM"
-
-[site]
-bucket = "./dist/client"

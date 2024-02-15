@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import CbConsoleBreads from '#root/component/console-breads/CbConsoleBreads.vue';
 import type { Bread } from '#root/component/console-breads/console-breads.type.ts';
-import { usePageContext } from '#root/util.ts';
+import { usePageContext } from '#pages/util.ts';
 
 const pageContext = usePageContext();
 const breadcrumbs = () => {
