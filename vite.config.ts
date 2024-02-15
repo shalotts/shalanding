@@ -6,10 +6,7 @@ import UnoCSS from 'unocss/vite';
 import vue from '@vitejs/plugin-vue';
 import ssr from 'vike/plugin';
 import path from 'node:path';
-// import { vavite } from 'vavite';
-
-const { buildSteps, ...config } = defaultViteF3vConfig;
-
+import { vavite } from 'vavite';
 
 const myConfig = {
   ssr: {
@@ -22,21 +19,16 @@ const myConfig = {
     exclude: ['functions/*']
   },
   plugins: [
-    // vavite({
-    //   handlerEntry: '/handler.ts',
-    //   serveClientAssetsInDev: true,
-    // }),
+    vavite({
+      handlerEntry: '/handler.ts',
+      serveClientAssetsInDev: true,
+    }),
     ssr({ prerender: true }),
     vue({
       include: [/\.vue$/, /\.md$/],
     }),
     UnoCSS(),
   ],
-  build: {
-    rollupOptions: {
-      external: ['f3v']
-    }
-  },
   resolve: {
     dedupe: ['vue'],
     alias: {
@@ -49,4 +41,4 @@ const myConfig = {
   },
 } satisfies UserConfig
 
-export default defineConfig(defu(config, myConfig));
+export default defineConfig(defu(defaultViteF3vConfig, myConfig));

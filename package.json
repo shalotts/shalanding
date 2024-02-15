@@ -3,7 +3,7 @@
   "module": "handler.ts",
   "type": "module",
   "scripts": {
-    "dev": "vite dev",
+    "dev": "vavite dev",
     "build": "vavite-multibuild",
     "build:default": "vite build"
   },
@@ -26,7 +26,9 @@
     "typescript": "^5.0.0"
   },
   "dependencies": {
-    "f3v": "latest"
+    "@unhead/addons": "^1.8.10",
+    "f3v": "latest",
+    "vike-vue": "^0.6.1"
   },
   "compilerOptions": {
     "paths": {

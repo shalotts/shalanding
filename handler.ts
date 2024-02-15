@@ -1,15 +1,18 @@
-import awsLambdaFastify from '@fastify/aws-lambda'
+import { IncomingMessage, ServerResponse } from 'node:http';
 import { AppModule, HttpModule } from 'f3v';
 import config from './sha.config.ts';
-export const proxy = async () => {
-  const http = new HttpModule(config.fastifyInstanceOptions);
-  const FastifyInstance = await http.createServer();
-  const $sha = new AppModule(FastifyInstance, config);
-  await $sha.create();
 
-  console.log('CREATED');
+const http = new HttpModule(config.fastifyInstanceOptions);
+const FastifyInstance = await http.createServer();
+const $sha = new AppModule(FastifyInstance, config);
+await $sha.create();
 
-  return awsLambdaFastify($sha.app)
-};
+let fastifyReadyPromise: PromiseLike<void> | undefined = $sha.app.ready();
+export default async function handler(request: IncomingMessage, reply: ServerResponse) {
+  if (fastifyReadyPromise) {
+    await fastifyReadyPromise;
+    fastifyReadyPromise = undefined;
+  }
 
-export default { proxy };
+  $sha.app.server.emit('request', request, reply);
+}
