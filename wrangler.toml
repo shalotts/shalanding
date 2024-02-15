@@ -3,10 +3,12 @@
 #[build]
 #cwd = "."
 #command="bun run build"
-#
+
 #[build.upload]
-#dir="/dist/server"
-#main="/dist/server/index.mjs"
+#dir="./dist/client"
+
+#[site]
+#bucket = "./dist/client"
 #
 #[vars]
 #VITE_CLOUDINARY_NAME="dr5gcup5n"
