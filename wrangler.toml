@@ -2,8 +2,11 @@ name = 'shaland'
 
 [build]
 cwd = "."
-command="bun run build:default"
-output="/dist/client"
+command="bun run build"
+
+[build.upload]
+dir="/dist/server"
+main="/dist/server/index.mjs"
 
 [vars]
 VITE_CLOUDINARY_NAME="dr5gcup5n"

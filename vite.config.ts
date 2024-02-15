@@ -8,6 +8,7 @@ import ssr from 'vike/plugin';
 import path from 'node:path';
 import { vavite } from 'vavite';
 
+const {css, ...config} = defaultViteF3vConfig;
 const myConfig = {
   ssr: {
     noExternal: ['@cloudinary/html']
@@ -41,4 +42,4 @@ const myConfig = {
   },
 } satisfies UserConfig
 
-export default defineConfig(defu(defaultViteF3vConfig, myConfig));
+export default defineConfig(defu(config, myConfig));
