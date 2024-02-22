@@ -10,14 +10,11 @@ import { vavite } from 'vavite';
 
 const {css, buildSteps, ...config} = defaultViteF3vConfig;
 const myConfig = {
-  ssr: {
-    noExternal: ['@cloudinary/html']
-  },
   server: {
     port: 3000,
   },
   optimizeDeps: {
-    exclude: ['functions/*']
+    exclude: ['functions/*', '@cloudinary/vue']
   },
   plugins: [
     vavite({
@@ -40,6 +37,12 @@ const myConfig = {
       '#pages': path.resolve('./src/pages/')
     },
   },
+  css: {
+    transformer: 'lightningcss',
+    lightningcss: {
+      targets: { chrome: 115, firefox: 115, safari: 16 }
+    }
+  }
 } satisfies UserConfig
 
 export default defineConfig(defu(config, myConfig));

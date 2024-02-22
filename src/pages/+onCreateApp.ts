@@ -9,6 +9,7 @@ import { Cloudinary } from '@cloudinary/url-gen';
 
 export default function onCreateApp(app: App, pageContext: PageContext) {
   const { data } = pageContext;
+
   const { VITE_CLOUDINARY_NAME, VITE_CLOUDINARY_KEY, VITE_CLOUDINARY_SECRET } = (data as any).env;
   const cloudinary = new Cloudinary({
     cloud: {
@@ -16,7 +17,7 @@ export default function onCreateApp(app: App, pageContext: PageContext) {
       apiKey: VITE_CLOUDINARY_KEY,
       apiSecret: VITE_CLOUDINARY_SECRET
     },
-  })
+  });
 
-  app.provide('cloudinary', cloudinary)
+  app.provide('cloudinary', cloudinary);
 }
