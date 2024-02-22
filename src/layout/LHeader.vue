@@ -22,7 +22,7 @@ const breadcrumbs = () => {
 </script>
 
 <template>
-  <header class=":uno: flex sticky top-0 bg-dark">
+  <header class=":uno: flex sticky top-0 bg-dark z-10">
     <div class="container">
       <cb-console-breads :data="breadcrumbs()"/>
     </div>

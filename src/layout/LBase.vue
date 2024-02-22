@@ -15,6 +15,7 @@ import LFooter from '#root/layout/LFooter.vue';
 html, body, #app {
   display: block;
   height: 100%;
+  line-height: 1.8;
 }
 
 .ff-mono {
