@@ -25,18 +25,21 @@ const logo = cldImageUrl('p3kgjrpnqkhfzfgybtg6')
         <div class="w-full max-w-2xl flex flex-col gap-5">
           <p>
             Use <tl-text-link href="#">[#customizer]</tl-text-link> to create your own boilerplate; <br>
-            Watch <tl-text-link href="#">[#docs]</tl-text-link> and comment it;
+            Watch <tl-text-link href="https://docs.shalotts.site/">[#docs]</tl-text-link> and comment it;
           </p>
 
           <ul class="font-bold">
+            <li>
+              > <span class="text-second-light">ORIENT</span> on commercial projects;
+            </li>
+            <li>
+              > <span class="text-second-light">GOOD</span> (NOT BEST) practice for beginner company or startup;
+            </li>
             <li>
               > <span class="text-second-light">MAKE</span> easy transfer between development stages;
             </li>
             <li>
               > <span class="text-second-light">PREFER</span> open-source and self-hosted products;
-            </li>
-            <li>
-              > <span class="text-second-light">ORIENT</span> on commercial projects;
             </li>
           </ul>
         </div>

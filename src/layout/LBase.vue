@@ -4,7 +4,7 @@ import LFooter from '#root/layout/LFooter.vue';
 </script>
 
 <template>
-  <div class=":uno: h-full flex flex-col justify-between ff-mono">
+  <div class=":uno: ff-mono">
     <l-header />
     <slot />
     <l-footer />
